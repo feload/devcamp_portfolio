@@ -1,0 +1,19 @@
+<h3>New portfolio item.</h3>
+
+<%= form_for @portfolio do |form| %>
+    <p>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+        <%= form.label :subtitle %>
+        <%= form.text_field :subtitle %>
+    </p>
+    <p>
+        <%= form.label :body %>
+        <%= form.text_area :body %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

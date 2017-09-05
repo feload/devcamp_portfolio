@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'friendly_id', '~> 5.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,6 +41,12 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+
+  gem "guard", ">= 2.2.2", :require => false
+  gem "guard-livereload",  :require => false
+  gem "rack-livereload"
+  gem "rb-fsevent",        :require => false
+
   gem 'faker'
   gem 'hirb'
   gem 'web-console', '>= 3.3.0'
