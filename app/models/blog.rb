@@ -3,6 +3,8 @@ class Blog < ApplicationRecord
     # Now, you can run something like this on rails console:
     # Blog.last.publish! <--- Last blog.status == 'published'
 
+    belongs_to  :topic
+
     extend FriendlyId
     friendly_id :title, use: :slugged
 
