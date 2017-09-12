@@ -1,8 +1,15 @@
+5.times do |topic|
+    Topic.create!(
+        title: Faker::Job.field
+    )
+end
+
 blogs = 10
 blogs.times do |blog|
    Blog.create!(
        title: Faker::Lorem.sentence,
-       body: Faker::Lorem.paragraph(2)
+       body: Faker::Lorem.paragraph(2),
+       topic_id: rand(Topic.count - 1) + 1
    )
 end
 

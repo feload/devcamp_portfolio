@@ -1,6 +1,14 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
+  def technology
+    @blogs = Blog.technology
+  end
+
+  def mining
+    @blogs = Blog.mining
+  end
+
   # GET /blogs
   # GET /blogs.json
   def index

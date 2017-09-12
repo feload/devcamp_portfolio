@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/contact'
 
+
+  get 'blogs/mining', to: 'blogs#mining'
+  get 'blogs/technology', to: 'blogs#technology'
+
   resources :portfolios, except: [:show]
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
