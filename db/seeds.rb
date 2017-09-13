@@ -38,3 +38,10 @@ portfolio.times do |portfolio|
 end
 
 puts "#{portfolio} portfolio items created."
+
+20.times do |technology|
+    Technology.create!(
+        name: Faker::Job.field,
+        portfolio_id: rand(Portfolio.count - 1) + 1
+    )
+end
